@@ -1,0 +1,92 @@
+@import "../../../index.scss";
+
+.root {
+  @include fontGilroy700(#ffffff);
+  border: 1px solid #ff9514;
+  border-radius: 40px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff9514;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:hover {
+    background-color: #111111;
+    border: 1px solid #111111;
+    @include fontGilroy700(#ffffff);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:active {
+    background-color: #575757;
+    border: 1px solid #575757;
+    @include fontGilroy700(#ffffff);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:disabled {
+    background-color: #f8b455;
+    @include fontGilroy700(#ffffff);
+    font-size: 16px;
+    line-height: 24px;
+    border-color: #f8b455;
+    cursor: auto;
+  }
+}
+
+.load {
+  @include fontGilroy700(#ffffff);
+  border: 1px solid #ff9514;
+  border-radius: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff9514;
+}
+
+.m {
+  width: 174px;
+  height: 48px;
+}
+
+.l {
+  width: 426px;
+  height: 68px;
+}
+
+.root.l {
+  @include fontNekstBlack900(#ffffff);
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.spinner {
+  height: 30px;
+  width: 30px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+  -webkit-animation: spinner 1s linear infinite;
+  -moz-animation: spinner 1s linear infinite;
+  -o-animation: spinner 1s linear infinite;
+  -ms-animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

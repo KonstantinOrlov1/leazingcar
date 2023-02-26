@@ -1,0 +1,37 @@
+@import "../../../index.scss";
+@import "../_inputStyles.styles.scss";
+
+.input::-webkit-input-placeholder {
+  @include fontGilroy400(#575757);
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  left: 24px;
+  top: 8px;
+}
+
+.input::-moz-placeholder {
+  @include fontGilroy400(#575757);
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  left: 24px;
+  top: 8px;
+}
+
+.input:-moz-placeholder {
+  @include fontGilroy400(#575757);
+  font-size: 12px;
+  line-height: 12px;
+  left: 24px;
+  top: 8px;
+}
+
+.input:-ms-input-placeholder {
+  @include fontGilroy400(#575757);
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  left: 24px;
+  top: 8px;
+}

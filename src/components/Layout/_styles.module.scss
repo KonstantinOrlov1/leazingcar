@@ -1,0 +1,18 @@
+@import "../Header/styles.module";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.main {
+  margin-top: $headerHeightMargins;
+  width: 100%;
+}

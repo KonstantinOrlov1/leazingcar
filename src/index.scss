@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"),
+    url("../fonts/gilroy/Gilroy-Regular.woff2") format("woff2"),
+    url("../fonts/gilroy/Gilroy-Regular.woff") format("woff"),
+    url("../fonts/gilroy/Gilroy-Regular.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nekst-Black";
+  src: url("../fonts/nekst/Nekst-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin fontNekstBlack900($color) {
+  font-family: "Nekst-Black";
+  font-weight: 900;
+  color: $color;
+}
+
+@mixin fontGilroy400($color) {
+  font-family: "Gilroy";
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin fontGilroy700($color) {
+  font-family: "Gilroy";
+  font-weight: 700;
+  color: $color;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,127 @@
+@import "../../index.scss";
+$paddingTop: 21px;
+$headerHeight: 48px + $paddingTop;
+$marginBottom: 21px;
+$headerHeightMargins: $headerHeight + $marginBottom;
+
+$menuHeight: 135px;
+
+.container {
+  width: 100%;
+}
+
+.header {
+  max-width: 1440px;
+  padding-top: $paddingTop;
+  padding-left: 48px;
+  padding-right: 48px;
+  margin-bottom: $marginBottom;
+  height: $headerHeight;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.logo_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 17px;
+}
+
+.logo_stick {
+  width: 1px;
+  height: 30px;
+  background-color: #c4c4c4;
+  margin-right: 17px;
+}
+
+.logo_title {
+  @include fontGilroy400(#11111180);
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.92px;
+  text-transform: lowercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav_container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+
+  a {
+    @include fontGilroy700(#575757);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  a:not(:last-child) {
+    margin-right: 32px;
+  }
+
+  margin-right: 24px;
+}
+
+.link {
+  padding: 6px 16px;
+
+  &:hover {
+    background-color: #f3f3f4;
+    border-radius: 8px;
+  }
+}
+
+.link_menu {
+  position: relative;
+  padding: 6px 16px;
+
+  &:hover {
+    background-color: #f3f3f4;
+    border-radius: 8px;
+  }
+
+  &:hover div {
+    display: block;
+  }
+}
+
+.menu {
+  height: $menuHeight;
+  width: 243px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  background: #ffffff;
+  border: 1px solid #f3f3f4;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04),
+    0px 14px 24px rgba(51, 51, 51, 0.12);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.punkt {
+  padding-top: 8px;
+  padding-left: 16px;
+  height: $menuHeight / 3;
+  @include fontGilroy400(#111111);
+  font-size: 16px;
+  line-height: 150%;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+}

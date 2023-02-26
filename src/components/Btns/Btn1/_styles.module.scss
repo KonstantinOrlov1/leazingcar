@@ -1,0 +1,127 @@
+@import "../../../index.scss";
+
+.root {
+  @include fontGilroy700(#ff9514);
+  border: 1px solid #ff9514;
+  border-radius: 40px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+
+  &:hover {
+    background-color: #ff9514;
+    @include fontGilroy700(#ffffff);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:active {
+    background-color: #ffa83d;
+    @include fontGilroy700(#ffffff);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:disabled {
+    background-color: #ffffff;
+    @include fontGilroy700(#f8b455);
+    font-size: 16px;
+    line-height: 24px;
+    border-color: #f8b455;
+    cursor: auto;
+  }
+}
+
+.load {
+  @include fontGilroy700(#ff9514);
+  border: 1px solid #ff9514;
+  border-radius: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.m {
+  width: 180px;
+  height: 48px;
+}
+
+.spinner {
+  height: 30px;
+  width: 30px;
+  border-left: 2px solid #ff9514;
+  border-bottom: 2px solid #ff9514;
+  border-right: 2px solid #ff9514;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+  -webkit-animation: spinner 1s linear infinite;
+  -moz-animation: spinner 1s linear infinite;
+  -o-animation: spinner 1s linear infinite;
+  -ms-animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

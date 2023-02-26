@@ -1,0 +1,12 @@
+.decor {
+  display: flex;
+  align-items: center;
+}
+
+.point {
+  display: inline-block;
+}
+
+.point:not(:last-child) {
+  margin-right: 10px;
+}

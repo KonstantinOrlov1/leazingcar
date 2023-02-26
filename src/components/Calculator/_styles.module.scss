@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+.root {
+  margin-bottom: 100px
+}
+
+.title {
+  @include fontNekstBlack900(#111111);
+  font-size: 54px;
+  line-height: 90%;
+  max-width: 753px;
+  max-height: 98px;
+  margin-top: 0;
+  margin-bottom: 32px;
+}

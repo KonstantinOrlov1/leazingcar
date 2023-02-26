@@ -1,0 +1,135 @@
+@import "../../index.scss";
+
+.root {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffff;
+  border-radius: 32px 32px 0px 0px;
+  animation: root 0.5s linear forwards;
+  -webkit-animation: root 0.5s linear forwards;
+  -moz-animation: root 0.5s linear forwards;
+  -o-animation: root 0.5s linear forwards;
+  -ms-animation: root 0.5s linear forwards;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 48px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.exit {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: #f3f3f4;
+  border-radius: 50%;
+  background-image: url("./imgs/img.svg"), url("./imgs/img1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+@keyframes root {
+  from {
+    height: 0px;
+  }
+
+  to {
+    height: 745px;
+  }
+}
+
+.title {
+  @include fontNekstBlack900("#111111");
+  font-size: 54px;
+  line-height: 90%;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.form {
+  margin-bottom: 32px;
+}
+
+.subtitle {
+  display: block;
+  @include fontGilroy400(#575757);
+  font-size: 16px;
+  line-height: 150%;
+  width: 466px;
+  height: 48px;
+  margin-bottom: 44px;
+}
+
+.form_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: stretch;
+  width: 655px;
+  margin-bottom: 30px;
+}
+
+.submit {
+  width: 100%;
+  border: 2px solid #f3f3f4;
+  border-radius: 16px;
+  padding: 29px 23px 29px 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submit_text {
+  max-width: 351px;
+  @include fontGilroy400(rgba(17, 17, 17, 0.5));
+  font-size: 14px;
+  line-height: 150%;
+
+  a {
+    @include fontGilroy400(black);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.messenger_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messenger {
+  text-decoration: none;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #e7e7e7;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.messenger:not(:last-child) {
+  margin-right: 16px;
+}
+
+.wa {
+  background-image: url("./imgs/wa.svg");
+}
+
+.telega {
+  background-image: url("./imgs/telega.svg");
+}
