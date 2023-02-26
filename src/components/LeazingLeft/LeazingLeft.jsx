@@ -37,12 +37,6 @@ export const LeazingLeft = ({ number }) => {
     },
   ];
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModalHandler = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <div className={styles.blok_left}>
       {number ? (
@@ -58,14 +52,8 @@ export const LeazingLeft = ({ number }) => {
       ) : arr[number].btn === "Грузим" ? (
         <Btn2 isLoading>{arr[number].btn}</Btn2>
       ) : (
-        <Btn2 onClick={openModalHandler}>{arr[number].btn}</Btn2>
+        <Btn2>{arr[number].btn}</Btn2>
       )}
-
-      {isOpen ? (
-        <div className={styles.back}>
-          <Modal event={openModalHandler} />
-        </div>
-      ) : null}
     </div>
   );
 };
