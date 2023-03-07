@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .root {
-  margin-bottom: 100px
+  margin-bottom: 100px;
 }
 
 .title {
@@ -12,4 +12,13 @@
   max-height: 98px;
   margin-top: 0;
   margin-bottom: 32px;
+}
+
+.btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 100px;
 }

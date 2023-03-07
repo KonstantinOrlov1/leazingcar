@@ -9,54 +9,68 @@ import { Points } from "../Points/Points";
 import classNames from "classnames";
 
 export const Leazing = () => {
-  const imgArr = [img11, img22, img33, img44, img11, img22];
+  const imgArr = [img22, img33, img44, img11, img22, img11];
+  const reverseArr = imgArr.slice(0).reverse();
 
-  let [img, setImg] = useState(0);
+  let [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(forward(), 10000);
+    const interval = setInterval(next(), 10000);
     return () => clearInterval(interval);
-  }, [imgArr]);
+  }, [currentIndex]);
 
-  function forward() {
-    if (img === imgArr.length - 1) {
-      return () => setImg(0);
-    } else {
-      return () => setImg(img + 1);
-    }
-  }
+  const back = () => {
+    return () =>
+      setCurrentIndex(
+        currentIndex === 0
+          ? (currentIndex = reverseArr.length - 1)
+          : (currentIndex = currentIndex - 1)
+      );
+  };
 
-  function back() {
-    if (img === 0) {
-      return () => setImg(imgArr.length - 1);
-    }
-
-    return () => setImg(img - 1);
-  }
+  const next = () => {
+    return () =>
+      setCurrentIndex(
+        currentIndex < reverseArr.length - 1
+          ? (currentIndex = currentIndex + 1)
+          : (currentIndex = 0)
+      );
+  };
 
   return (
     <section className={styles.section}>
       <div className={styles.root}>
-        <LeazingLeft number={img} />
+        <LeazingLeft number={currentIndex} />
         <div className={styles.img_container}>
-          <img
-            className={classNames(styles.img, styles.fade_in)}
-            src={imgArr[img]}
-            alt="photo"
-            title="photo"
-            loading="lazy"
-          />
+          {reverseArr.map((elem, index) => {
+            let position = "nextSlide";
+
+            if (index === currentIndex) {
+              position = "this";
+            }
+
+            return (
+              <img
+                className={classNames(styles.img, styles[position])}
+                key={index}
+                src={elem}
+                alt="photo"
+                title="photo"
+                loading="lazy"
+              />
+            );
+          })}
           <div className={styles.btn_container}>
             <span
               className={classNames(styles.anim, styles.left)}
               onClick={back()}
             ></span>
-            <span className={styles.right} onClick={forward()}></span>
+            <span className={styles.right} onClick={next()}></span>
           </div>
         </div>
       </div>
       <div className={styles.decor}>
-        <Points number={img} />
+        <Points number={currentIndex} length={reverseArr.length} />
       </div>
     </section>
   );
