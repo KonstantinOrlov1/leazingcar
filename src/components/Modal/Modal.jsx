@@ -57,14 +57,13 @@ export const Modal = ({ event }) => {
               term: term,
             };
 
-            // const response = await fetch("/url", {
-            //   method: "POST",
-            //   headers: {
-            //     "Content-Type": "application/json;charset=utf-8",
-            //   },
-            //   body: JSON.stringify(obj),
-            // });
-
+            alert(`
+              phone: ${obj.phone}
+              name: ${obj.name}
+              cost: ${obj.cost}
+              contribution: ${obj.contribution}
+              term: ${obj.term}
+            `);
             resetForm({ values: initialValue });
             event();
           }}
@@ -82,7 +81,7 @@ export const Modal = ({ event }) => {
                   на обработку персональных данных
                 </a>
               </p>
-              <Btn2 type="submit">Оставить заявку</Btn2>
+              <Btn2 type="submit" size="m">Оставить заявку</Btn2>
             </div>
           </Form>
         </Formik>

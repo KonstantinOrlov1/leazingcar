@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { BID, CONTRIBUTION, COST, SIZES, TERM } from "../../constants/helpers";
 import { selectContributionFilter } from "../../store/contribution/selectors";
 import { selectCostModuleFilter } from "../../store/cost/selectors";
-import { selectTermFilter, selectTermModule } from "../../store/term/selectors";
+import { selectTermFilter } from "../../store/term/selectors";
 import { Btn2 } from "../Btns/Btn2/Btn2";
 import { Modal } from "../Modal/Modal";
 import { Payment } from "../Payment/Payment";
@@ -79,8 +79,11 @@ export const FormCalc = () => {
             />
           </div>
           <div className={styles.action_container}>
-            <Payment title="Сумма договора лизинга" value={sum} />
-            <Payment title="Ежемесячный платеж от" value={payment} />
+            <div className={styles.action_payment}>
+              <Payment title="Сумма договора лизинга" value={sum} />
+              <Payment title="Ежемесячный платеж от" value={payment} />
+            </div>
+
             <Btn2 type="submit" size={SIZES.l} onClick={openModalHandler}>
               Оставить заявку
             </Btn2>

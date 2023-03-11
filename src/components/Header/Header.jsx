@@ -3,19 +3,20 @@ import logo from "./imgs/logo.svg";
 import classNames from "classnames";
 import { NavLink } from "react-router-dom";
 import { Btn1 } from "../Btns/Btn1/Btn1";
+import { useState } from "react";
+import { ModalBurger } from "../ModalBurger/ModalBurger";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModalHandler = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className={classNames(styles.container, styles.header)}>
       <div className={styles.logo_container}>
-        <a href="/">
-          <img
-            src={logo}
-            alt="логотип"
-            title="лизинговая кампания"
-            className={styles.logo}
-          />
-        </a>
+        <a href="/" className={styles.linka}></a>
         <span className={styles.logo_stick}></span>
         <span className={styles.logo_title}>лизинговая кампания</span>
       </div>
@@ -38,6 +39,12 @@ export const Header = () => {
         </div>
         <Btn1>Оставить заявку</Btn1>
       </div>
+      <div className={styles.burger} onClick={openModalHandler}></div>
+      {isOpen ? (
+        <div className={styles.back}>
+          <ModalBurger event={openModalHandler} />
+        </div>
+      ) : null}
     </header>
   );
 };

@@ -17,3 +17,13 @@
   font-size: 54px;
   line-height: 90%;
 }
+
+@media (max-width: 670px) {
+  .value {
+    font-size: 44px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+}

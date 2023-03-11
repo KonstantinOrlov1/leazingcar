@@ -106,6 +106,14 @@ div .input {
   justify-content: space-between;
 }
 
+.action_payment {
+  display: flex;
+
+  div:not(:last-child) {
+    margin-right: 90px;
+  }
+}
+
 .back {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
@@ -117,4 +125,43 @@ div .input {
   justify-content: center;
   align-items: center;
   z-index: 2;
+}
+
+@media (max-width: 1400px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .input_container {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .cost,
+  .term {
+    background-position: 98%;
+  }
+
+  .action_container {
+    display: block;
+  }
+
+  .action_payment {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .action_payment {
+    flex-direction: column;
+
+    div:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
 }

@@ -61,10 +61,7 @@ export const Leazing = () => {
             );
           })}
           <div className={styles.btn_container}>
-            <span
-              className={classNames(styles.anim, styles.left)}
-              onClick={back()}
-            ></span>
+            <span className={styles.left} onClick={back()}></span>
             <span className={styles.right} onClick={next()}></span>
           </div>
         </div>

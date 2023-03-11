@@ -19,7 +19,6 @@
 
 .img {
   position: absolute;
-  top: 0;
   right: 0;
   max-width: 840px;
   opacity: 0;
@@ -57,6 +56,7 @@
   border-radius: 50%;
   cursor: pointer;
   background-color: #000000;
+  z-index: 1;
 }
 
 .left {
@@ -72,11 +72,64 @@
   cursor: pointer;
   margin-right: 20px;
   background-color: #000000;
+  z-index: 1;
 }
 
 .decor {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  width: 100%;
   margin-bottom: 44px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .img {
+    max-width: 700px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .root {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .img_container {
+    height: 300px;
+  }
+
+  .img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+  }
+
+  .btn_container {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .img {
+    position: absolute;
+    width: auto;
+    max-height: 300px;
+  }
+
+  .root {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }

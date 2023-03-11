@@ -22,3 +22,28 @@
   margin-bottom: 30px;
   width: 100px;
 }
+
+@media (max-width: 1400px) {
+  .title {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .root {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 670px) {
+  .title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 34px;
+  }
+}

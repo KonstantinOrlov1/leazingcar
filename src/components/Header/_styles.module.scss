@@ -25,14 +25,18 @@ $menuHeight: 135px;
   background-color: #ffffff;
 }
 
+.linka {
+  background-image: url("./imgs/logo.svg");
+  width: 200px;
+  height: 34px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .logo_container {
   height: 100%;
   display: flex;
   align-items: center;
-}
-
-.logo {
-  margin-right: 17px;
 }
 
 .logo_stick {
@@ -123,5 +127,75 @@ $menuHeight: 135px;
 
   &:hover {
     background-color: #f1f1f1;
+  }
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .logo {
+    max-width: 165px;
+  }
+
+  .link {
+    padding: 0;
+  }
+
+  .link_menu {
+    padding: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .header {
+    padding-left: 36px;
+    padding-right: 36px;
+    width: 100vw;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    background-image: url("./imgs/burger.svg");
+    width: 32px;
+    height: 32px;
+  }
+
+  .back {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo_stick,
+  .logo_title {
+    display: none;
+  }
+
+  .header {
+    background-color: #111111;
+  }
+
+  .burger {
+    background-image: url("./imgs/whiteburger.svg");
+  }
+
+  .linka {
+    background-image: url("./imgs/mobilelogo.svg");
+    width: 160px;
   }
 }

@@ -16,3 +16,20 @@
   margin-top: $headerHeightMargins;
   width: 100%;
 }
+
+@media (max-width: 980px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    margin-top: $headerHeight;
+  }
+
+  .container {
+    padding: 0;
+  }
+}

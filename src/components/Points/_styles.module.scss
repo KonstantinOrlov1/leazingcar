@@ -10,3 +10,9 @@
 .point:not(:last-child) {
   margin-right: 10px;
 }
+
+@media (max-width: 980px) {
+  .decor {
+    margin-top: 20px;
+  }
+}
